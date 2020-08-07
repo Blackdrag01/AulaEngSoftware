@@ -33,10 +33,13 @@ public class TesteCompra2 extends TestCase {
         compraDesc10.setDesconto(calc.calculadesconto(compraDesc10.getValor(),compraDesc10.getIdade()));
         compraDesc10.setTotal(calc.calculatotal(compraDesc10.getValor(),compraDesc10.getDesconto()));
         
-       
+      compraDesc1.setValor(3000);
+      compraDesc1.setIdade(20);
+      compraDesc1.setDesconto(calc.calculadesconto(compraDesc1.getValor(),compraDesc1.getIdade()));
+      compraDesc1.setTotal(calc.calculatotal(compraDesc1.getValor(),compraDesc1.getDesconto()));
     
     Assert.assertEquals(1500, compraDesc10.getTotal());
-    //Assert.assertEquals(2970, compraDesc1.getTotal());
+    Assert.assertEquals(2970, compraDesc1.getTotal());
     
     }
 
